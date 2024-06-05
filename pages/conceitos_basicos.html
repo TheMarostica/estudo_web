@@ -1,0 +1,107 @@
+<html>
+    <head>
+       <title>Conceitos básicos</title>
+    </head>
+
+    <body>
+        <h1>Formulários</h1>
+        <hr>
+
+        <h2>Indice</h2>
+        <hr>
+        <ul>
+            <li><a href="#tagform">Tag Form</a></li>
+            <li><a href="#inputetipos">Tag Input e seu Tipos</a></li>
+            <li><a href="#checkboxeradios">Checkbox e Radio</a></li>
+            <li><a href="#buttonetipos">Button e seus Tipos</a></li>
+            <li><a href="#selectetipos">Select e seus Tipos</a></li>
+        </ul>
+
+        <h2 id="tagform">Tag form</h2>
+        <hr>
+        <form name="cadastro" onsubmit="alert('Formulário enviado');" autocomplete="off" method="POST" action="https://meusite.com.br/cadastro">
+            Nome: <input type="text" name="nome"> <br>
+            Idade: <input type="number" name="idade" minlength="0"> <br>
+            Senha: <input type="password" name="senha"> <br>
+            <button type="submit" >Salvar</button>
+        </form>
+
+        <h2 id="inputetipos">Tag Input e seus Tipos</h2>
+        <hr>
+        <form>
+            <label>Text: <input type="text"></label> <br>
+            <label>Number: <input type="number" min="0" step="5" max="99"></label> <br>
+            <label>Range: <input type="range" min="0" max="100" value="20"></label> <br>
+            <label>Color: <input type="color"></label> <br>
+            <label>Email: <input type="email"></label> <br>
+            <label>URL: <input type="url"></label> <br>
+            <label>Date: <input type="date"></label> <br>
+            <label>Week: <input type="week"></label> <br>
+            <label>Month: <input type="month"></label> <br>
+            <label>checkbox: <input type="checkbox"> <input type="checkbox" ></label> <br>
+            <label>Radio: <input type="radio" name="escolha"> <input type="radio" name="escolha"></label> <br>
+            <label>Hidden: <input type="hidden"></label> <br> <!-- fica invisivel para o navegador, mas quando você enviar ele vai ser mandado -->
+            <label>File: <input type="file" multiple></label> <br> <!-- se não colocar o multiple ele não deixa selecionar váris arquivos -->
+            <label>Search: <input type="search"></label> <br>
+            <label>Button: <input type="button" value="Enviar"></label> <br>
+        </form>
+
+        <h2 id="checkboxeradios">Checkbox e Radio</h2>
+        <hr>
+        <h3>Você selecionou: <strong><i>Pizza de Calabresa</i></strong></h3>
+
+        <form method="POST">
+            <h4>Quais opcionais você deseja?</h4>
+            <label><input type="checkbox" name="opcional[]" value="queijo">+ queijo</label><br>
+            <label><input type="checkbox" name="opcional[]" value="calabresa">+ calabresa</label><br>
+            <label><input type="checkbox" name="opcional[]" value="cebola">+ cebola</label><br>
+            <label><input type="checkbox" disabled name="opcional[]" value="azeitona">+ azeitona</label><br>
+
+            <h4>Borda recheada?</h4>
+            <label><input type="radio" name="borda" value="sim">Sim</label><br>
+            <label><input type="radio" name="borda" value="nao">Não</label><br>
+
+            <h4>Bebida?</h4>
+            <label><input type="radio" name="bebida" value="agua">Água</label><br>
+            <label><input type="radio" name="bebida" value="suco">Suco</label><br>
+            <label><input type="radio" name="bebida" value="refrigerante">Refrigerante</label><br>
+            <label><input type="radio" name="bebida" value="nenhum">Nenhum</label><br>
+            
+            <button type="submit">Enviar</button>
+        </form>
+        
+        <h2 id="buttonetipos">Button e seus Tipos</h2>
+        <hr>
+
+        <h2 id="buttonetipos">Formulário de Cadastro</h2>
+        <form method="POST">
+            <label>Nome<sup>*</sup>: <input type="text" name="nome"></label><br>
+            <label>Idade<sup>*</sup>: <input type="number" name="idade" minlength="0"></label><br>
+            <label>Senha<sup>*</sup>: <input type="password" name="senha"></label><br>
+
+            <button type="button" onclick="alert('cliquei aqui!');">clique</button>
+            <button type="button" onmouseover="alert('passei aqui!');">passe</button><br>
+            <button type="reset">Limpar</button><br> <!-- limpa os campos do formulário que ele está dentro -->
+            <button type="submit">Enviar</button><br>
+        </form>
+
+        <h2 id="selectetipos">Select e seus Tipos</h2>
+        <hr>
+
+        <form>
+            <label>Nome<sup>*</sup>: <input type="text" name="nome"></label><br>
+            <label>Cargo<sup>*</sup>: </label>
+            <select name="cargo">
+                <option selected value="">Selecione o cargo</option>
+                <option value="administrativo">Administrativo</option>
+                <option value="gerente">Gerente</option>
+                <option value="diretor">Diretor</option>
+                <option value="auxiliar">Auxiliar</option>
+                <option value="estagio">Estágio</option>
+            </select><br>
+            <label>Assunto<sup>*</sup>: <input type="text" name="assunto"></label><br>
+            <label>Mensagem: <textarea rows="5" cols="25" name="mensagem">Digite sua mensagem</textarea></label><br>
+            <button type="submit">Enviar</button><br>
+        </form>
+    </body>
+</html>
